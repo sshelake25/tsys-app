@@ -7,6 +7,9 @@ import { UserComponent } from './user/user.component';
 import { ListUserComponent } from './list-user/list-user.component';
 import { MainContainerComponent } from './main-container/main-container.component';
 import { FoooterComponent } from './foooter/foooter.component';
+import { HighlightDirective } from './highlight.directive';
+import { ImgurlPipe } from './imgurl.pipe';
+import { UserprofileService } from './userprofile.service';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,14 @@ import { FoooterComponent } from './foooter/foooter.component';
     UserComponent,
     ListUserComponent,
     MainContainerComponent,
-    FoooterComponent
+    FoooterComponent,
+    HighlightDirective,
+    ImgurlPipe
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [UserprofileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
