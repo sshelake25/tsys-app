@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserprofileService } from '../userprofile.service';
 
 @Component({
   selector: 'tsys-user',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userServ: UserprofileService) { }
 
   ngOnInit(): void {
+
+    let myaddress = this.userServ.getAddress();
+
+    console.log(myaddress);
+
   }
 
 }

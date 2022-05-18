@@ -11,6 +11,9 @@ import { HighlightDirective } from './highlight.directive';
 import { ImgurlPipe } from './imgurl.pipe';
 import { UserprofileService } from './userprofile.service';
 
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,9 +26,10 @@ import { UserprofileService } from './userprofile.service';
     ImgurlPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [UserprofileService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
