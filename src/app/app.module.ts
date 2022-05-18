@@ -12,7 +12,28 @@ import { ImgurlPipe } from './imgurl.pipe';
 import { UserprofileService } from './userprofile.service';
 
 import { HttpClientModule } from '@angular/common/http';
+import { Route, RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
 
+const routesConfig: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
+  },
+  {
+    path: 'list',
+    component: ListUserComponent
+  },
+  {
+    path: 'my/list',
+    component: UserComponent
+  }
+];
 
 @NgModule({
   declarations: [
@@ -27,7 +48,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routesConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
