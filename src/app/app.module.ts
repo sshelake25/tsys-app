@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Route, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { LearnRxComponent } from './learn-rx/learn-rx.component';
 
 const routesConfig: Routes = [
   {
@@ -32,6 +33,10 @@ const routesConfig: Routes = [
   {
     path: 'my/list',
     component: UserComponent
+  },
+  {
+    path: 'learnrx',
+    component: LearnRxComponent
   }
 ];
 
@@ -44,7 +49,8 @@ const routesConfig: Routes = [
     MainContainerComponent,
     FoooterComponent,
     HighlightDirective,
-    ImgurlPipe
+    ImgurlPipe,
+    LearnRxComponent
   ],
   imports: [
     BrowserModule,

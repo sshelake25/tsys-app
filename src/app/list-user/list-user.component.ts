@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
+import { filter } from 'rxjs';
+
 @Component({
   selector: 'tsys-list-user',
   templateUrl: './list-user.component.html',
@@ -17,8 +19,8 @@ export class ListUserComponent implements OnInit {
   ngOnInit(): void {
     const cmpyName = 'TSYS';
 
-
     this.myhttp.get('https://reqres.in/api/users?page=2')
+      .pipe()
       .subscribe(
         (mydata) => this.myApiData = mydata
       );
